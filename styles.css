@@ -1,0 +1,186 @@
+/* RESET CSS BASICO */
+/* Reset básico ampliado */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ESTILOS */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+header {
+  background-color: #4CAF50;
+  color: white;
+  height: 20vh;
+  width: 100%;
+}
+.map {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #ff3c00;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 75vh;
+    width: 100%;
+}
+
+footer {
+    height: 5vh;
+    width: 100%;
+}
+
+
+      .loader-control {
+        background: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      }
+      .cluster-popup {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      .cluster-popup ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+
+
+.custom-marker-icon {
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+.custom-marker-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Para mantener consistencia con los clusters */
+.cluster-marker {
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+
+.popup-content {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.popup-content h3 {
+  margin: 0 0 5px 0;
+  color: #0066b1;
+  font-size: 16px;
+}
+
+.popup-content h4 {
+  margin: 10px 0 5px 0;
+  font-size: 14px;
+}
+
+.bus-list {
+  margin-top: 10px;
+}
+
+.bus-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.bus-list th {
+  text-align: left;
+  padding: 3px 5px;
+  background-color: #f0f0f0;
+}
+
+.bus-list td {
+  padding: 3px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.linea-bus {
+  display: inline-block;
+  background-color: #0066b1;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.update-time {
+  font-size: 11px;
+  color: #666;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.no-buses {
+  color: #666;
+  font-style: italic;
+}
+
+.error-message {
+  color: #d9534f;
+}
+
+.loading-info {
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.cluster-popup ul {
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+.cluster-popup li {
+  margin: 3px 0;
+}
+
+.loader-control {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  font-size: 14px;
+}
