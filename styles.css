@@ -1,6 +1,16 @@
+/* IMPORT DE FUENTES */
+
+@font-face {
+  font-family: "FuturaBoldOblique";
+  src: url("./FuturaBoldOblique.otf") format("opentype");
+  font-weight: bold;
+  font-style: oblique; /* o italic, si se ve mejor */
+}
+
 /* RESET CSS BASICO */
 /* Reset básico ampliado */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -10,18 +20,32 @@ html, body {
   text-align: center;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, ul, ol, li,
-figure, blockquote, dl, dd {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -30,6 +54,11 @@ a {
   color: inherit;
 }
 /* ESTILOS */
+
+:root {
+  --rojo-tmb: #e30620;
+  --oscuro-tmb: #323232;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -40,147 +69,146 @@ body {
   text-align: center;
 }
 header {
-  background-color: #4CAF50;
+  background-color: var(--oscuro-tmb);
   color: white;
-  height: 20vh;
+  height: 15vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "FuturaBoldOblique", sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+  gap: 25%;
+}
+@media (max-width: 600px) {
+  header {
+    gap: 15%;
+  }
+}
+.headerStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  width: 100%;
+  color: white;
+}
+header p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    color: white;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.tagline {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--rojo-tmb);
+}
+
+.guion {
+  font-size: .8em;
 }
 .map {
-    height: 100%;
-    width: 100%;
-    border: 2px solid #ff3c00;
-
+  height: 100%;
+  width: 100%;
+  border: 10px solid var(--rojo-tmb);
 }
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 75vh;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  width: 100%;
 }
 
 footer {
-    height: 5vh;
-    width: 100%;
+  height: 5vh;
+  width: 100%;
+  background-color: var(--oscuro-tmb);
+  color: white;
+  font-family: "FuturaBoldOblique", sans-serif;
+  font-weight: 500;
+}
+.footerContainer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%; 
+  gap: 1%;
+  font-weight: 400;
 }
 
-
-      .loader-control {
-        background: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      }
-      .cluster-popup {
-        max-height: 200px;
-        overflow-y: auto;
-      }
-      .cluster-popup ul {
-        margin: 0;
-        padding-left: 20px;
-      }
-
-
-
-.custom-marker-icon {
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
-  transition: transform 0.2s;
+.linkTMB {
+  text-decoration: underline;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.linkTMB:hover {
+  color: var(--rojo-tmb);
+  transform: scale(1.15);
 }
 
-.custom-marker-icon:hover {
-  transform: scale(1.1);
+.custom-cluster-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Para mantener consistencia con los clusters */
-.cluster-marker {
-  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+.cluster-count {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(-1px);
 }
 
-
-.popup-content {
-  font-family: Arial, sans-serif;
-  line-height: 1.4;
+.loading-msg {
+  background: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
 }
 
-.popup-content h3 {
-  margin: 0 0 5px 0;
-  color: #0066b1;
-  font-size: 16px;
-}
-
-.popup-content h4 {
-  margin: 10px 0 5px 0;
-  font-size: 14px;
-}
-
-.bus-list {
-  margin-top: 10px;
-}
-
-.bus-list table {
+.bus-times table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
 }
 
-.bus-list th {
-  text-align: left;
-  padding: 3px 5px;
-  background-color: #f0f0f0;
-}
-
-.bus-list td {
-  padding: 3px 5px;
+.bus-times td,
+.bus-times th {
+  padding: 3px 6px;
   border-bottom: 1px solid #eee;
 }
 
-.linea-bus {
-  display: inline-block;
-  background-color: #0066b1;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 3px;
+.line {
   font-weight: bold;
-  min-width: 20px;
-  text-align: center;
+  color: #0066cc;
+}
+
+.time {
+  font-weight: bold;
 }
 
 .update-time {
-  font-size: 11px;
+  font-size: 0.7em;
   color: #666;
-  margin-top: 10px;
-  text-align: right;
-}
-
-.no-buses {
-  color: #666;
-  font-style: italic;
-}
-
-.error-message {
-  color: #d9534f;
-}
-
-.loading-info {
-  color: #666;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.cluster-popup ul {
-  margin: 5px 0;
-  padding-left: 20px;
-}
-
-.cluster-popup li {
-  margin: 3px 0;
-}
-
-.loader-control {
-  background: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  font-size: 14px;
 }

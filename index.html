@@ -7,18 +7,37 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Marker Cluster -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+    />
   </head>
   <body>
     <header>
-      <h1>Bcn Bus MAP</h1>
+      <div class="head">
+        <h1>Bcn Bus MAP <span class="guion">-</span></h1>
+        <p class="tagline">Toda la red de buses de Barcelona en tiempo real</p>
+      </div>
+      <div class="headerStatus">
+        <p id="status">🟢 Conectado</p>
+        <p id="last-update">Actualizado: <span id="update-time">--:--</span></p>
+      </div>
     </header>
     <main>
       <div class="map" id="map"></div>
     </main>
     <footer>
-      <p>Urisito</p>
+      <div class="footerContainer">
+        <p>
+          Datos proporcionados por
+          <a class="linkTMB" href="https://www.tmb.cat" target="_blank" rel="noopener">TMB</a>
+        </p>
+        <p>© 2025 BCN Bus Map - Todos los derechos reservados</p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
