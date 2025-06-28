@@ -86,6 +86,10 @@ header {
   header {
     gap: 15%;
   }
+  footer {
+    min-height: 5vh;
+    padding-bottom: 10px;
+  }
 }
 .headerStatus {
   display: flex;
@@ -142,6 +146,7 @@ footer {
   color: white;
   font-family: "FuturaBoldOblique", sans-serif;
   font-weight: 500;
+  display: flex;
 }
 .footerContainer {
   display: flex;
@@ -212,3 +217,57 @@ footer {
   font-size: 0.7em;
   color: #666;
 }
+
+
+/* ...existing code... */
+
+/* Responsive Header y Footer solo con media queries */
+@media (max-width: 700px) {
+  header {
+    padding: 0.7rem 0.3rem;
+  }
+  .head h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .head .tagline {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .headerStatus {
+    flex-direction: column !important;
+    gap: 0.3rem !important;
+    align-items: center !important;
+    margin-top: 0.3rem;
+  }
+  #status, #last-update {
+    font-size: 0.98rem;
+  }
+  .footerContainer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 0.2rem !important;
+    padding: 0.2rem 0;
+    text-align: center;
+    width: 100vw;
+  }
+  .footerContainer p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .head h1 {
+    font-size: 1rem;
+  }
+  .footerContainer p {
+    font-size: 0.85rem;
+  }
+  header, footer {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+}
+
+/* ...existing
